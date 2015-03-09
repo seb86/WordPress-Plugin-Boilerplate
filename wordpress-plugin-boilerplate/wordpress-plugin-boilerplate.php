@@ -48,7 +48,7 @@ final class Plugin_Name {
 	/**
 	 * The single instance of the class
 	 *
-	 * @var Plugin Name
+	 * @var Plugin_Name
 	 */
 	protected static $_instance = null;
 
