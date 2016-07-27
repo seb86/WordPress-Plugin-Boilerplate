@@ -393,11 +393,11 @@ final class Plugin_Name {
 		if ( strpos( $class, 'plugin_name_shortcode_' ) === 0 ) {
 			$path = $this->plugin_path() . '/includes/classes/shortcodes/';
 		}
-		else if ( strpos( $class, 'plugin_name_' ) === 0 ) {
-			$path = $this->plugin_path() . '/includes/classes/';
-		}
 		else if ( strpos( $class, 'plugin_name_admin' ) === 0 ) {
 			$path = $this->plugin_path() . '/includes/admin/';
+		}
+		else if ( strpos( $class, 'plugin_name_' ) === 0 ) {
+			$path = $this->plugin_path() . '/includes/classes/';
 		}
 
 		if ( $path && is_readable( $path . $file ) ) {
