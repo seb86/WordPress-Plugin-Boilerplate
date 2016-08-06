@@ -393,11 +393,11 @@ final class Plugin_Name {
 		if ( strpos( $class, 'plugin_name_shortcode_' ) === 0 ) {
 			$path = $this->plugin_path() . '/includes/classes/shortcodes/';
 		}
-		else if ( strpos( $class, 'plugin_name_' ) === 0 ) {
-			$path = $this->plugin_path() . '/includes/classes/';
-		}
 		else if ( strpos( $class, 'plugin_name_admin' ) === 0 ) {
 			$path = $this->plugin_path() . '/includes/admin/';
+		}
+		else if ( strpos( $class, 'plugin_name_' ) === 0 ) {
+			$path = $this->plugin_path() . '/includes/classes/';
 		}
 
 		if ( $path && is_readable( $path . $file ) ) {
@@ -469,7 +469,7 @@ final class Plugin_Name {
 	 */
 	static function display_req_notice() {
 		echo '<div id="message" class="error"><p><strong>';
-		echo sprintf( __('Sorry, %s requires WordPress ' . PLUGIN_NAME_WP_VERSION_REQUIRE . ' or higher. Please upgrade your WordPress setup', 'wordpress-plugin-boilerplate'), PLUGIN_NAME );
+		echo sprintf( __('Sorry, %s requires WordPress %s or higher. Please upgrade your WordPress setup', PLUGIN_NAME_TEXT_DOMAIN), PLUGIN_NAME, PLUGIN_NAME_WP_VERSION_REQUIRE );
 		echo '</strong></p></div>';
 	}
 
